@@ -1,0 +1,10 @@
+('/usr/local/lib/python3.9/dist-packages/PyAudio-0.2.13-py3.9-linux-aarch64.egg',
+ None,
+ {'*.abi3.so',
+  '*.cpython-39-arm-linux-gnueabihf.so',
+  '*.py',
+  '*.pyc',
+  '*.so',
+  'EGG-INFO'},
+ 'DATA',
+ [])

@@ -1,0 +1,9 @@
+pip
+opencv-python-headless
+opencv-python
+pyaudio
+pyqt5
+pyqtspinner
+pyinstaller
+simpleaudio
+beepy

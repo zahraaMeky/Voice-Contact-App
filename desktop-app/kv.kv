@@ -1,0 +1,445 @@
+
+ManageScreen:
+    LoginScreen:
+    AdminScreen:
+    RoomInterance:
+    UserScreen:
+    UserControlScreen:
+
+<LoginScreen>:
+    name: "login"
+    MDFloatLayout:
+        md_bg_color: 0.153, 0.216, 0.302, 1       
+        BoxLayout:
+            spacing: 10 
+            padding:10
+            orientation: 'vertical'
+            pos_hint: {"center_x": 0.5,"center_y":0.8}
+            MDIconButton:
+                on_release: app.close_button()
+                pos_hint: {"right": 1,"top":1}
+                size_hint: None, None
+                size: "40dp", "40dp"
+                Image:
+                    source:"resources/closeicon2.png"
+                    size_hint: None, None
+                    size: "40dp", "40dp"
+            Header:
+            # BoxLayout:
+            #     orientation: 'vertical'
+            #     pos_hint: {"center_x": 0.5,"center_y":0.1}
+            MDLabel: 
+                text:app.arabicText('اسم المستخدم')
+                pos_hint: {"center_x": 0.5}
+                font_name:'resources/bahijanBold.ttf'
+                size_hint_x: 0.4
+                color:210 / 255, 141 / 255, 26 / 255, 1
+                size_hint_y: None
+                height: self.texture_size[1]
+            MDTextField:
+                id: username
+                icon_right: "account"
+                size_hint_x: 0.4
+                line_color_normal: 210 / 255, 141 / 255, 26 / 255, 1
+                icon_color: 1, 1, 1, 1
+                font_size: "18sp"
+                font_name:'resources/bahijanBold.ttf'
+                pos_hint: {"center_x": 0.5}
+                line_color_focus: 210 / 255, 141 / 255, 26 / 255, 1
+            MDLabel: 
+                text:app.arabicText('كلمة المرور')
+                pos_hint: {"center_x": 0.5}
+                font_name:'resources/bahijanBold.ttf'
+                size_hint_x: 0.4
+                color:210 / 255, 141 / 255, 26 / 255, 1
+                size_hint_y: None
+                height: self.texture_size[1]
+            MDTextField:
+                id: password
+                icon_right: "eye-off"
+                size_hint_x: 0.4
+                line_color_normal: 210 / 255, 141 / 255, 26 / 255, 1 
+                icon_color:  0.984, 0.306, 0.196, 1  
+                font_size: "18sp"
+                font_name: "resources/bahijanBold.ttf"
+                pos_hint: {"center_x": 0.5}
+                hint_text_color: 0.909, 0.667, 0.259, 1   
+                line_color_focus:210 / 255, 141 / 255, 26 / 255, 1
+                password:True
+            
+            MDRectangleFlatIconButton:
+                text: app.arabicText('تسجيل دخول')
+                icon_right: "account"
+                theme_text_color: "Custom"
+                icon_color: 1, 1, 1, 1  # Set the icon color to white
+                font_size:"20sp"
+                pos_hint: {"center_x": 0.5}
+                line_color:210 / 255, 141 / 255, 26 / 255, 1  # Equivalent to #fb4e32
+                md_bg_color:210 / 255, 141 / 255, 26 / 255, 1
+                text_color:10 / 255, 16 / 255, 37 / 255, 1
+                size_hint_x: 0.4
+                font_name:'resources/bahijanBold.ttf'
+                on_press: app.login()
+            
+
+
+# <LoginScreen>:
+#     name: "login"
+#     MDFloatLayout:
+#         md_bg_color:0.153, 0.216, 0.302, 1
+#         BoxLayout:
+#             orientation: 'vertical'
+#             pos_hint: {"center_x": 0.5,"center_y": 0.7}
+#             MDIconButton:
+#                 on_release: app.close_button()
+#                 pos_hint: {"right": 1}
+#                 size_hint: None, None
+#                 size: "40dp", "40dp"
+#                 Image:
+#                     source:"resources/closeicon2.png"
+#                     size_hint: None, None
+#                     size: "40dp", "40dp"
+#                     pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+#             Header:
+#             # BoxLayout:
+#             #     orientation: 'vertical'
+#             #     pos_hint: {"center_x": 0.5}
+#             #     padding: 10  # Adjust the padding as needed
+#             # Image:
+#             #     source: 'resources/voice-message.png'
+#             #     size: (120,120)
+#             #     pos_hint: {"center_x": 0.5}
+#             MDLabel: 
+#                 text:app.arabicText('اسم المستخدم')
+#                 pos_hint: {"center_x": 0.5}
+#                 font_name:'resources/bahijanBold.ttf'
+#                 size_hint_x: 0.4
+#                 color:210 / 255, 141 / 255, 26 / 255, 1
+#                 size_hint_y: None
+#                 height: self.texture_size[1]
+#             MDTextField:
+#                 id: username
+#                 icon_right: "account"
+#                 size_hint_x: 0.4
+#                 line_color_normal: 210 / 255, 141 / 255, 26 / 255, 1
+#                 icon_color: 1, 1, 1, 1
+#                 font_size: "18sp"
+#                 font_name:'resources/bahijanBold.ttf'
+#                 pos_hint: {"center_x": 0.5}
+#                 line_color_focus: 210 / 255, 141 / 255, 26 / 255, 1
+#             MDLabel: 
+#                 text:app.arabicText('كلمة المرور')
+#                 pos_hint: {"center_x": 0.5}
+#                 font_name:'resources/bahijanBold.ttf'
+#                 size_hint_x: 0.4
+#                 color:210 / 255, 141 / 255, 26 / 255, 1
+#                 size_hint_y: None
+#                 height: self.texture_size[1]
+#             MDTextField:
+#                 id: password
+#                 icon_right: "eye-off"
+#                 size_hint_x: 0.4
+#                 line_color_normal: 210 / 255, 141 / 255, 26 / 255, 1 
+#                 icon_color:  0.984, 0.306, 0.196, 1  
+#                 font_size: "18sp"
+#                 font_name: "resources/bahijanBold.ttf"
+#                 pos_hint: {"center_x": 0.5}
+#                 hint_text_color: 0.909, 0.667, 0.259, 1   
+#                 line_color_focus:210 / 255, 141 / 255, 26 / 255, 1
+#                 password:True
+            
+#             MDRectangleFlatIconButton:
+#                 text: app.arabicText('تسجيل دخول')
+#                 icon_right: "account"
+#                 theme_text_color: "Custom"
+#                 icon_color: 1, 1, 1, 1  # Set the icon color to white
+#                 font_size:"20sp"
+#                 pos_hint: {"center_x": 0.5}
+#                 line_color:210 / 255, 141 / 255, 26 / 255, 1  # Equivalent to #fb4e32
+#                 md_bg_color:210 / 255, 141 / 255, 26 / 255, 1
+#                 text_color:10 / 255, 16 / 255, 37 / 255, 1
+#                 size_hint_x: 0.4
+#                 font_name:'resources/bahijanBold.ttf'
+#                 on_press: app.login()
+
+# 0.322, 0.427, 0.510, 1
+
+          
+    # MDCard:
+    #     size_hint: None, None
+    #     size: 300,300
+    #     pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    #     elevation: 2
+    #     padding: 25
+    #     spacing: 25
+    #     orientation: 'vertical'
+    #     MDLabel:
+    #         id: Login
+    #         text: "Login"
+    #         font_size: 20
+    #         halign: 'center'
+    #         size_hint_y: None
+    #         height: self.texture_size[1]
+    #         padding_y: 15
+
+    #     MDTextField:
+    #         id: username
+    #         mode:"round"
+    #         hint_text: "username"
+    #         icon_right: "account"
+    #         size_hint_x: None
+    #         width: 200
+    #         font_size: 18
+    #         pos_hint: {"center_x": 0.5}
+
+    #     MDTextField:
+    #         id: password
+    #         mode:"round"
+    #         hint_text: "password"
+    #         icon_right: "eye-off"
+    #         size_hint_x: None
+    #         width: 200
+    #         font_size: 18
+    #         pos_hint: {"center_x": 0.5}
+    #         password: True
+
+    #     MDRoundFlatButton:
+    #         text: 'Login'
+    #         font_size: 12
+    #         pos_hint: {"center_x": 0.5}
+    #         icon_left: 'login'
+    #         on_press: app.login()
+
+<AdminScreen>:
+    name: "admin"
+    MDFloatLayout:
+        md_bg_color: 0.153, 0.216, 0.302, 1       
+        BoxLayout:
+            spacing: 10 
+            padding:10
+            orientation: 'vertical'
+            pos_hint: {"center_x": 0.5}
+            MDIconButton:
+                on_release: app.close_button()
+                pos_hint: {"right": 1,"top":1}
+                size_hint: None, None
+                size: "40dp", "40dp"
+                Image:
+                    source:"resources/closeicon2.png"
+                    size_hint: None, None
+                    size: "40dp", "40dp"
+            Header:
+       
+            BoxLayout:
+                id: btns_Hlayout
+                orientation: 'horizontal'
+                pos_hint: {"center_x": 0.5}
+                size_hint: None, None
+                size: self.minimum_size
+                spacing: 10  
+                padding:10
+              
+            BoxLayout:
+                id:progress
+                orientation: 'vertical' 
+                pos_hint: {"center_x": 0.5}
+                size_hint: None, None
+                size: self.minimum_size
+                spacing: 10  
+                padding:10 
+            BoxLayout:
+                id: toggle
+                orientation: 'horizontal'             
+                pos_hint: {"center_x": 0.5}  
+                size_hint: None, None
+                size: self.minimum_size 
+                spacing: 5 
+                padding:5
+            
+
+            BoxLayout:
+                orientation: 'vertical'  
+                ScrollView:
+                    width: rooms_layout.minimum_width
+                    size_hint_x: None  
+                    pos_hint: {"center_x": 0.5}  
+                    GridLayout:
+                        id: rooms_layout
+                        cols: 5
+                        spacing: 25
+                        padding: 25
+                        size_hint_y: None  
+                        height: self.minimum_height
+                        size_hint_x: None  
+                        width: self.minimum_width
+
+            # GridLayout:
+            #     pos_hint: {"center_x": 0.5}  # Center horizontally
+            #     orientation: 'lr-tb'
+            #     id: rooms_layout
+            #     spacing: 15
+            #     padding: 15
+            #     size_hint_y: None
+            #     height: self.minimum_height
+
+
+<UserScreen>:
+    name: "user"
+    MDFloatLayout:
+        md_bg_color: 0.153, 0.216, 0.302, 1       
+        BoxLayout:
+            spacing: 10 
+            padding:10
+            orientation: 'vertical'
+            pos_hint: {"center_x": 0.5}
+            MDIconButton:
+                on_release: app.close_button()
+                pos_hint: {"right": 1,"top":1}
+                size_hint: None, None
+                size: "40dp", "40dp"
+                Image:
+                    source:"resources/closeicon2.png"
+                    size_hint: None, None
+                    size: "40dp", "40dp"
+            Header:
+            BoxLayout:
+                id: btns_Hulayout
+                orientation: 'horizontal'
+                pos_hint: {"center_x": 0.5}
+                size_hint: None, None
+                size: self.minimum_size  # Set the size to accommodate the buttons
+                spacing: 10  
+                padding:10
+            BoxLayout:
+                id:progress
+                orientation: 'vertical' 
+                pos_hint: {"center_x": 0.5}
+                size_hint: None, None
+                size: self.minimum_size
+                spacing: 10  
+                padding:10 
+            BoxLayout:
+                id: usertoggle
+                orientation: 'horizontal'             
+                pos_hint: {"center_x": 0.5}  
+                size_hint: None, None
+                size: self.minimum_size 
+                spacing: 5
+                padding:5
+            
+                
+            BoxLayout:
+                orientation: 'vertical'  
+                ScrollView:
+                    width: user_rooms_layout.minimum_width
+                    size_hint_x: None  
+                    pos_hint: {"center_x": 0.5}  
+                    GridLayout:
+                        id: user_rooms_layout
+                        cols: 5
+                        spacing: 25
+                        padding: 25
+                        size_hint_y: None  
+                        height: self.minimum_height
+                        size_hint_x: None  
+                        width: self.minimum_width
+
+
+
+
+
+
+
+
+
+
+
+
+    # MDFloatLayout:
+    #     md_bg_color: 0.153, 0.216, 0.302, 1       
+    #     BoxLayout:
+    #         orientation: 'vertical'
+    #         pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    #         padding: "20dp"  # Adjust the padding as needed
+    #         spacing: "20dp"
+    #         Header:
+    #         BoxLayout:
+    #             id: btns_Hulayout
+    #             orientation: 'horizontal'
+    #             pos_hint: {"center_x": 0.5}
+    #             size_hint: None, None
+    #             size: self.minimum_size  # Set the size to accommodate the buttons
+    #             spacing: 10  # Adjust the spacing between buttons
+    #             LogoutButton:
+    #         BoxLayout:
+    #             pos_hint: {"center_x": 0.5}  # Center horizontally
+    #             orientation: 'horizontal'
+    #             id: user_rooms_layout
+    #             spacing: 15
+    #             padding: 15
+    #             size_hint_y: None
+    #             height: self.minimum_height
+
+
+
+
+
+<UserControlScreen>:
+    name: "users"
+    MDFloatLayout:
+        md_bg_color: 0.153, 0.216, 0.302, 1       
+        BoxLayout:
+            spacing: 10 
+            padding:10
+            orientation: 'vertical'
+            pos_hint: {"center_x": 0.5}
+            MDIconButton:
+                on_release: app.close_button()
+                pos_hint: {"right": 1,"top":1}
+                size_hint: None, None
+                size: "40dp", "40dp"
+                Image:
+                    source:"resources/closeicon2.png"
+                    size_hint: None, None
+                    size: "40dp", "40dp"
+            Header:
+            BoxLayout:
+                id: userbtns_Hlayout
+                orientation: 'horizontal'
+                pos_hint: {"center_x": 0.5}
+                size_hint: None, None
+                size: self.minimum_size  # Set the size to accommodate the buttons
+                spacing: 10  
+                padding:10
+                LogoutButton:
+                   
+            BoxLayout:
+                id: prog
+                orientation: 'vertical'             
+                pos_hint: {"center_x": 0.5}  
+                size_hint: None, None
+                size: self.minimum_size 
+            BoxLayout:
+                orientation: 'vertical'             
+                pos_hint: {"center_x": 0.5}
+            
+                ScrollView:
+                    pos_hint: {"center_x": 0.5}
+                    GridLayout:
+                        id: users_layout
+                        cols: 5
+                        spacing: 20
+                        padding: 25
+                        size_hint_y: None  
+                        height: self.minimum_height
+                        size_hint_x: None  
+                        width: self.minimum_width
+
+
+     
+          
+       
+        
+  
+  
