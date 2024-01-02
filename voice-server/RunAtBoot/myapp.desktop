@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=admin
+Comment=panel
+Exec=/home/admin/Desktop/control-panel -nograb #-nograb for comboBox on touch Screen
+Icon=/usr/share/pixmaps/python.xpm
+Path=/home/admin/Desktop
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Utility;Application;
