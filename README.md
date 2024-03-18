@@ -18,6 +18,6 @@ Voice Contact is a system designed to facilitate communication between administr
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - python Kivy
-- raspberry pi 
+- Raspberry Pi
 
 </div>
