@@ -13,7 +13,7 @@ https://github.com/zahraaMeky/Voice-Contact-App/assets/123356306/f0e1de62-692a-4
   
 ## <a name="introduction">🤖 Introduction</a>
 
-system facilitates communication between the administrator and the concerned persons through a special network 
+Voice Contact is a system designed to facilitate communication between administrators and concerned individuals through WiFi. It provides a seamless and efficient platform for communication, enhancing collaboration and information sharing.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
